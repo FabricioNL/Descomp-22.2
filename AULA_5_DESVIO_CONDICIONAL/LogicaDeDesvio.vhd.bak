@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity LogicaDeDesvio 
+	is port (
+	
+		JMP: in std_logic;
+		JEQ : in std_logic;
+		FlagEQ : in std_logic;
+		SelMuxPC: out std_logic
+	
+	);
+	
+end entity;	
+
+
+architecture comportamento of LogicaDeDesvio is
+	signal inputs: std_logic_vector(2 downto 0);
