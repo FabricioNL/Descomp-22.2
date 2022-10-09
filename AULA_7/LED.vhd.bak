@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity LED is
+	port(
+		CLK					: in std_logic;
+		LED_Address			: in std_logic_vector(2 downto 0);
+		Saida_bloco_4 		: in std_logic;
+		Escrita 				: in std_logic;
+		DATA_OUT				: in std_logic_vector(7 downto 0);
+		Conjunto_LED 		: out std_logic_vector(7 downto 0);
+		LED_Address_1		: out std_logic;
+		LED_Address_2		: out std_logic
+	);
+	
+end entity;
+
+architecture arquitetura of LED is
+	
+begin
+
+
+-- O port map completo do Registrador Equal.
+LED1 : entity work.FlipFlopUnitario
+          port map (DIN => , DOUT => , ENABLE => , CLK => CLK, RST => '0');
+			 
+-- O port map completo do Registrador Equal.
+LED2 : entity work.FlipFlopUnitario
+          port map (DIN => , DOUT => , ENABLE => , CLK => CLK, RST => '0');
+	
+		
+
+
+end architecture;
