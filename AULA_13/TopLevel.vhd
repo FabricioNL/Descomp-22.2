@@ -13,11 +13,19 @@ entity TopLevel is
   port   (
   
 	 -- entrada
-    CLOCK_50 	: in std_logic;
-    KEY			: in std_logic_vector(3 downto 0);
+    CLOCK_50 		: in std_logic;
+    KEY				: in std_logic_vector(3 downto 0);
+	 OP 				: in std_logic_vector(1 downto 0);
+	 WR_enable  	: in std_logic;
 	 
-	 OP 			: in std_logic_vector(1 downto 0);
-	 WR_enable  : in std_logic
+	 -- saidas 
+	 
+	 instrucao  	: out std_logic_vector(5 downto 0);
+	 conteudo_ULA  : out std_logic_vector(31 downto 0);
+	 
+	 end_REGS 		: out std_logic_vector(4 downto 0);
+	 end_REGT 		: out std_logic_vector(4 downto 0);
+	 end_REGD 		: out std_logic_vector(4 downto 0)
   );
 end entity;
 
@@ -76,7 +84,7 @@ PC : entity work.registradorGenerico   generic map (larguraDados => 32)
 			);
 			 
 -- O port map completo do incrementa
-incrementaPC :  entity work.somaConstante  generic map (larguraDados => 32, constante => 1)
+incrementaPC :  entity work.somaConstante  generic map (larguraDados => 32, constante => 4)
         port map( 
 				entrada	=> saida_PC, 
 				saida 	=> entrada_PC
@@ -94,22 +102,30 @@ ULA1 : entity work.ULASomaSub  generic map(larguraDados => 32)
 -- Memória ROM
 ROM1 : entity work.memoriaROM   generic map (dataWidth => 32, addrWidth => 32)
           port map (
+			 clk => CLK,
 				Endereco => saida_PC, 
 				Dado 		=> saida_ROM
 			);
 
-bancoRegistradores : entity work.bancoRegistradores generic map (
+bancoRegistradores : entity work.bancoReg generic map (
 				larguraDados        => 32,
 				larguraEndBancoRegs => 5
 			) port map (
 				clk => CLK,
-				enderecoA 		=> saida_ROM(4 downto 0),
-				enderecoB 		=> saida_ROM(4 downto 0),
-				enderecoC 		=> saida_ROM(4 downto 0),
+				enderecoA 		=> saida_ROM(25 downto 21),
+				enderecoB 		=> saida_ROM(20 downto 16),
+				enderecoC 		=> saida_ROM(15 downto 11),
 				dadoEscritaC 	=> saida_ULA,
 				escreveC 		=> WR_enable,
 				saidaA 			=> saida_reg_a,
 				saidaB 			=> saida_reg_b
 			);
 
+			
+end_REGS 		<= saida_ROM(25 downto 21);
+end_REGT 		<= saida_ROM(20 downto 16);
+end_REGD 		<= saida_ROM(15 downto 11);
+conteudo_ULA 	<= saida_ULA;		
+instrucao 		<= saida_ROM(31 downto 26);
+	
 end architecture;

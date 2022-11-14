@@ -13,7 +13,9 @@ entity TopLevel is
     SW: in std_logic_vector(9 downto 0);
     PC_OUT: out std_logic_vector(9-1 downto 0);
 	 SELEC_MUX_PROX_PC : out std_logic_vector(1 downto 0);
-    LEDR  : out std_logic_vector(9 downto 0)
+    LEDR  : out std_logic_vector(9 downto 0);
+	 FLAG_EQUAL: out std_logic;
+	 REG_E: out std_logic
   );
 end entity;
 
@@ -40,6 +42,7 @@ architecture arquitetura of TopLevel is
   signal saida_regE    : std_logic;
   signal saida_regRetorno    : std_logic_vector(8 downto 0);
   signal saida_ULA_E    : std_logic;
+  signal saida_flag_equal: std_logic;
 
 begin
 
@@ -72,7 +75,8 @@ MUX1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
 -- o port map completo do decoder
 DECODER : entity work.decoderInstru 
 			 port map (opcode => Sinais_Controle(12 downto 9), saida => Saida_Decoder);
-			 
+
+-- o port map completo da logica de desvio			 
 LOGICADESVIO : entity work.LogicaDeDesvio
 			 port map (JMP => Saida_Decoder(6), JEQ => Saida_Decoder(7), FlagEQ => saida_regE, JSR => Saida_Decoder(10), RET => Saida_Decoder(9), SelMux => SelMuxPC);
 
@@ -80,11 +84,11 @@ LOGICADESVIO : entity work.LogicaDeDesvio
 REGA : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
           port map (DIN => Saida_ULA, DOUT => REG1_ULA_A, ENABLE => Habilita_A, CLK => CLK, RST => '0');
 			 
--- O port map completo do Acumulador.
+-- .
 END_RETORNO : entity work.registradorGenerico   generic map (larguraDados => 9)
           port map (DIN => proxPC, DOUT => saida_regRetorno, ENABLE => Saida_Decoder(11), CLK => CLK, RST => '0');
 			 
--- O port map completo do Acumulador.
+-- O port map completo do Registrador Equal.
 REGE : entity work.FlipFlopUnitario
           port map (DIN => saida_ULA_E, DOUT => saida_regE, ENABLE => Saida_Decoder(8), CLK => CLK, RST => '0');
 
@@ -92,6 +96,7 @@ REGE : entity work.FlipFlopUnitario
 PC : entity work.registradorGenerico   generic map (larguraDados => 9)
           port map (DIN => MUX_REG2, DOUT => Endereco, ENABLE => '1', CLK => CLK, RST => '0');
 
+			 
 incrementaPC :  entity work.somaConstante  generic map (larguraDados => 9, constante => 1)
         port map( entrada => Endereco, saida => proxPC);
 
@@ -119,7 +124,7 @@ LEDR (8) <= Habilita_A;
 LEDR (7 downto 0) <= REG1_ULA_A;
 
 SELEC_MUX_PROX_PC <= SelMuxPC;
-
 PC_OUT <= Endereco;
+
 
 end architecture;

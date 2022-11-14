@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/05/2022 15:43:49"
+-- Generated on "09/20/2022 12:04:56"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          TopLevel
 -- 
@@ -38,13 +38,15 @@ SIGNAL CLOCK_50 : STD_LOGIC;
 SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL LEDR : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL PC_OUT : STD_LOGIC_VECTOR(8 DOWNTO 0);
+SIGNAL SELEC_MUX_PROX_PC : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 COMPONENT TopLevel
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-	PC_OUT : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+	LEDR : BUFFER STD_LOGIC_VECTOR(9 DOWNTO 0);
+	PC_OUT : BUFFER STD_LOGIC_VECTOR(8 DOWNTO 0);
+	SELEC_MUX_PROX_PC : BUFFER STD_LOGIC_VECTOR(1 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
@@ -56,28 +58,26 @@ BEGIN
 	KEY => KEY,
 	LEDR => LEDR,
 	PC_OUT => PC_OUT,
+	SELEC_MUX_PROX_PC => SELEC_MUX_PROX_PC,
 	SW => SW
 	);
-
--- CLOCK_50
-t_prcs_CLOCK_50: PROCESS
-BEGIN
-	CLOCK_50 <= '0';
-WAIT;
-END PROCESS t_prcs_CLOCK_50;
 
 -- KEY[0]
 t_prcs_KEY_0: PROCESS
 BEGIN
 	KEY(0) <= '1';
 	WAIT FOR 10000 ps;
-	FOR i IN 1 TO 49
+	KEY(0) <= '0';
+	WAIT FOR 10000 ps;
+	FOR i IN 1 TO 48
 	LOOP
-		KEY(0) <= '0';
-		WAIT FOR 10000 ps;
 		KEY(0) <= '1';
 		WAIT FOR 10000 ps;
+		KEY(0) <= '0';
+		WAIT FOR 10000 ps;
 	END LOOP;
+	KEY(0) <= '1';
+	WAIT FOR 10000 ps;
 	KEY(0) <= '0';
 WAIT;
 END PROCESS t_prcs_KEY_0;

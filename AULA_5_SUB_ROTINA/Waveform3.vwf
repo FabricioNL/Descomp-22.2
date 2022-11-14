@@ -21,6 +21,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +40,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
@@ -338,6 +340,26 @@ SIGNAL("SELEC_MUX_PROX_PC[0]")
 	PARENT = "SELEC_MUX_PROX_PC";
 }
 
+SIGNAL("FLAG_EQUAL")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("REG_E")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("CLOCK_50")
 {
 	NODE
@@ -544,6 +566,24 @@ TRANSITION_LIST("SELEC_MUX_PROX_PC[1]")
 }
 
 TRANSITION_LIST("SELEC_MUX_PROX_PC[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 400.0;
+	}
+}
+
+TRANSITION_LIST("FLAG_EQUAL")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 400.0;
+	}
+}
+
+TRANSITION_LIST("REG_E")
 {
 	NODE
 	{
@@ -808,6 +848,24 @@ DISPLAY_LINE
 	TREE_INDEX = 25;
 	TREE_LEVEL = 1;
 	PARENT = 23;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "FLAG_EQUAL";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 26;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "REG_E";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

@@ -18,27 +18,29 @@ SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
 SW[9] => ~NO_FANOUT~
-PC_OUT[0] << registradorgenerico:PC.DOUT[0]
-PC_OUT[1] << registradorgenerico:PC.DOUT[1]
-PC_OUT[2] << registradorgenerico:PC.DOUT[2]
-PC_OUT[3] << registradorgenerico:PC.DOUT[3]
-PC_OUT[4] << registradorgenerico:PC.DOUT[4]
-PC_OUT[5] << registradorgenerico:PC.DOUT[5]
-PC_OUT[6] << registradorgenerico:PC.DOUT[6]
-PC_OUT[7] << registradorgenerico:PC.DOUT[7]
-PC_OUT[8] << registradorgenerico:PC.DOUT[8]
-SELEC_MUX_PROX_PC[0] << logicadedesvio:LOGICADESVIO.SelMux[0]
-SELEC_MUX_PROX_PC[1] << logicadedesvio:LOGICADESVIO.SelMux[1]
-LEDR[0] << registradorgenerico:REGA.DOUT[0]
-LEDR[1] << registradorgenerico:REGA.DOUT[1]
-LEDR[2] << registradorgenerico:REGA.DOUT[2]
-LEDR[3] << registradorgenerico:REGA.DOUT[3]
-LEDR[4] << registradorgenerico:REGA.DOUT[4]
-LEDR[5] << registradorgenerico:REGA.DOUT[5]
-LEDR[6] << registradorgenerico:REGA.DOUT[6]
-LEDR[7] << registradorgenerico:REGA.DOUT[7]
-LEDR[8] << decoderinstru:DECODER.saida[4]
-LEDR[9] << decoderinstru:DECODER.saida[5]
+PC_OUT[0] <= registradorgenerico:PC.DOUT[0]
+PC_OUT[1] <= registradorgenerico:PC.DOUT[1]
+PC_OUT[2] <= registradorgenerico:PC.DOUT[2]
+PC_OUT[3] <= registradorgenerico:PC.DOUT[3]
+PC_OUT[4] <= registradorgenerico:PC.DOUT[4]
+PC_OUT[5] <= registradorgenerico:PC.DOUT[5]
+PC_OUT[6] <= registradorgenerico:PC.DOUT[6]
+PC_OUT[7] <= registradorgenerico:PC.DOUT[7]
+PC_OUT[8] <= registradorgenerico:PC.DOUT[8]
+SELEC_MUX_PROX_PC[0] <= logicadedesvio:LOGICADESVIO.SelMux[0]
+SELEC_MUX_PROX_PC[1] <= logicadedesvio:LOGICADESVIO.SelMux[1]
+LEDR[0] <= registradorgenerico:REGA.DOUT[0]
+LEDR[1] <= registradorgenerico:REGA.DOUT[1]
+LEDR[2] <= registradorgenerico:REGA.DOUT[2]
+LEDR[3] <= registradorgenerico:REGA.DOUT[3]
+LEDR[4] <= registradorgenerico:REGA.DOUT[4]
+LEDR[5] <= registradorgenerico:REGA.DOUT[5]
+LEDR[6] <= registradorgenerico:REGA.DOUT[6]
+LEDR[7] <= registradorgenerico:REGA.DOUT[7]
+LEDR[8] <= decoderinstru:DECODER.saida[4]
+LEDR[9] <= decoderinstru:DECODER.saida[5]
+FLAG_EQUAL <= ulasomasub:ULA1.flagEqual
+REG_E <= flipflopunitario:REGE.DOUT
 
 
 |TopLevel|muxGenerico4x1:MUX2
@@ -433,7 +435,7 @@ saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-flagEqual <= flagEqual.DB_MAX_OUTPUT_PORT_TYPE
+flagEqual <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|memoriaRAM:RAM1

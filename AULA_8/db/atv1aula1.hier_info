@@ -17,6 +17,7 @@ SW[6] => buffer_3_state_8portas:SW_0_7.entrada[6]
 SW[7] => buffer_3_state_8portas:SW_0_7.entrada[7]
 SW[8] => buffer_3_state_8portas:SW_8.entrada[0]
 SW[9] => buffer_3_state_8portas:SW_9.entrada[0]
+RESET_FPGA => buffer_3_state_8portas:FPGA_RESET.entrada[0]
 LEDR[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 LEDR[1] <= LEDR[1].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[2] <= LEDR[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -84,6 +85,33 @@ saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|buffer_3_state_8portas:KEY3
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|buffer_3_state_8portas:FPGA_RESET
 entrada[0] => saida[0].DATAIN
 entrada[1] => saida[1].DATAIN
 entrada[2] => saida[2].DATAIN
@@ -1128,7 +1156,7 @@ Instruction_IN[4] => Data_Address[4].DATAIN
 Instruction_IN[5] => Data_Address[5].DATAIN
 Instruction_IN[6] => Data_Address[6].DATAIN
 Instruction_IN[7] => Data_Address[7].DATAIN
-Instruction_IN[8] => ~NO_FANOUT~
+Instruction_IN[8] => Data_Address[8].DATAIN
 Instruction_IN[9] => ~NO_FANOUT~
 Instruction_IN[10] => ~NO_FANOUT~
 Instruction_IN[11] => ~NO_FANOUT~
@@ -1160,6 +1188,7 @@ Data_Address[4] <= Instruction_IN[4].DB_MAX_OUTPUT_PORT_TYPE
 Data_Address[5] <= Instruction_IN[5].DB_MAX_OUTPUT_PORT_TYPE
 Data_Address[6] <= Instruction_IN[6].DB_MAX_OUTPUT_PORT_TYPE
 Data_Address[7] <= Instruction_IN[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_Address[8] <= Instruction_IN[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|Processador:MP|muxGenerico4x1:MUX2

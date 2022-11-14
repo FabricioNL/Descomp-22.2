@@ -32,7 +32,7 @@ architecture comportamento of ULASomaSub is
 					subtracao when (seletor = SUB) else
 					passa;
 		
-		flagEqual <= not ( saida(7) or saida(6) or saida(5) or saida(4) or saida(3) or saida(2) or saida(1) or saida(0) or '0');
+		flagEqual <= '1' when (subtracao = x"00") else '0';
 		
 		
 end architecture;

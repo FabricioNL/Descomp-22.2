@@ -107,7 +107,7 @@ rd <= Saida_Decoder(1);
 
 Data_OUT <= REG1_ULA_A;
 ROM_Address <= Endereco;
-Data_Address <= instruction_IN(7 downto 0);
+Data_Address <= instruction_IN(8 downto 0);
 
 
 end architecture;

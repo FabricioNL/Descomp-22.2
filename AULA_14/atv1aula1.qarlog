@@ -1,0 +1,31 @@
+Quartus Prime Archive log --	C:/DesComp/AULA_14/atv1aula1.qarlog
+
+Archive:	C:/DesComp/AULA_14/atv1aula1.qar
+Date:		Tue Nov 08 10:32:17 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/DesComp/AULA_14/RAMMIPS.vhd
+C:/DesComp/AULA_14/TopLevel.vhd
+C:/DesComp/AULA_14/ULASomaSub.vhd
+C:/DesComp/AULA_14/Waveform.vwf
+C:/DesComp/AULA_14/Waveform4.vwf
+C:/DesComp/AULA_14/atv1aula1.qpf
+C:/DesComp/AULA_14/atv1aula1.qsf
+C:/DesComp/AULA_14/bancoRegistradores.vhd
+C:/DesComp/AULA_14/decoderInstru.vhd
+C:/DesComp/AULA_14/edgeDetector.vhd
+C:/DesComp/AULA_14/estendeSinal.vhd
+C:/DesComp/AULA_14/memoriaRAM.vhd
+C:/DesComp/AULA_14/memoriaROM.vhd
+C:/DesComp/AULA_14/muxGenerico2x1.vhd
+C:/DesComp/AULA_14/muxGenerico4x1.vhd
+C:/DesComp/AULA_14/registradorGenerico.vhd
+C:/DesComp/AULA_14/shifter_2.vhd
+C:/DesComp/AULA_14/somaConstante.vhd
+C:/DesComp/AULA_14/somaNaoConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

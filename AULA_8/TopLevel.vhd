@@ -95,6 +95,7 @@ FF_REG: entity work.flipflopGenerico
 			DIN 		=> '1',
 			DOUT 		=> FF_OUT,
 			ENABLE 	=> '1',
+
 			CLK		=> ,
 			RST		=> FF_RESET
 	);

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for atv1aula1
-Sat Oct 08 14:51:43 2022
+Sun Oct 09 16:22:15 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -57,12 +57,13 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  49. Port Connectivity Checks: "sete_segmentos:HEXS"
  50. Port Connectivity Checks: "buffer_3_state_8portas:SW_9"
  51. Port Connectivity Checks: "buffer_3_state_8portas:SW_8"
- 52. Port Connectivity Checks: "buffer_3_state_8portas:KEY3"
- 53. Port Connectivity Checks: "buffer_3_state_8portas:KEY2"
- 54. Port Connectivity Checks: "buffer_3_state_8portas:KEY1"
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Analysis & Synthesis Messages
+ 52. Port Connectivity Checks: "buffer_3_state_8portas:FPGA_RESET"
+ 53. Port Connectivity Checks: "buffer_3_state_8portas:KEY3"
+ 54. Port Connectivity Checks: "buffer_3_state_8portas:KEY2"
+ 55. Port Connectivity Checks: "buffer_3_state_8portas:KEY1"
+ 56. Post-Synthesis Netlist Statistics for Top Partition
+ 57. Elapsed Time Per Partition
+ 58. Analysis & Synthesis Messages
 
 
 
@@ -89,14 +90,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Oct 08 14:51:43 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 09 16:22:15 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; atv1aula1                                   ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 25                                          ;
+; Total pins                      ; 26                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -254,13 +255,13 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;          ;
 ; Dedicated logic registers                   ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 25       ;
+; I/O pins                                    ; 26       ;
 ;                                             ;          ;
 ; Total DSP Blocks                            ; 0        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
 ; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 25       ;
+; Total fan-out                               ; 26       ;
 ; Average fan-out                             ; 0.50     ;
 +---------------------------------------------+----------+
 
@@ -270,7 +271,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |TopLevel                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 25   ; 0            ; |TopLevel           ; TopLevel    ; work         ;
+; |TopLevel                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 26   ; 0            ; |TopLevel           ; TopLevel    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -516,7 +517,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port               ; Type   ; Severity ; Details                                                                             ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
-; data_address[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_address[8..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -720,6 +721,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+----------------------+
 
 
++---------------------------------------------------------------+
+; Port Connectivity Checks: "buffer_3_state_8portas:FPGA_RESET" ;
++---------------+-------+----------+----------------------------+
+; Port          ; Type  ; Severity ; Details                    ;
++---------------+-------+----------+----------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND               ;
++---------------+-------+----------+----------------------------+
+
+
 +---------------------------------------------------------+
 ; Port Connectivity Checks: "buffer_3_state_8portas:KEY3" ;
 +---------------+-------+----------+----------------------+
@@ -755,7 +765,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 25                          ;
+; boundary_port         ; 26                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -777,7 +787,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Oct 08 14:51:32 2022
+    Info: Processing started: Sun Oct 09 16:22:00 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off atv1aula1 -c atv1aula1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -785,7 +795,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ulasoma
     Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/DesComp/AULA_8/ULASomaSub.vhd Line: 15
     Info (12023): Found entity 1: ULASomaSub File: C:/DesComp/AULA_8/ULASomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
-    Info (12022): Found design unit 1: TopLevel-arquitetura File: C:/DesComp/AULA_8/TopLevel.vhd Line: 27
+    Info (12022): Found design unit 1: TopLevel-arquitetura File: C:/DesComp/AULA_8/TopLevel.vhd Line: 28
     Info (12023): Found entity 1: TopLevel File: C:/DesComp/AULA_8/TopLevel.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
     Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/DesComp/AULA_8/registradorGenerico.vhd Line: 15
@@ -837,25 +847,26 @@ Info (12021): Found 2 design units, including 1 entities, in source file seteseg
     Info (12022): Found design unit 1: sete_segmentos-arquitetura File: C:/DesComp/AULA_8/seteSegmentos.vhd Line: 27
     Info (12023): Found entity 1: sete_segmentos File: C:/DesComp/AULA_8/seteSegmentos.vhd Line: 4
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(21): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(45): object "LED1_endereco" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 45
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(46): object "LED2_endereco" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 46
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(47): object "LEDR_endereco" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 47
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(52): object "HEX0" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 52
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(53): object "HEX1" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 53
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(54): object "HEX2" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 54
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(55): object "HEX3" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 55
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(56): object "HEX4" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(57): object "HEX5" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 57
-Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "buffer_3_state_8portas:KEY1" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 79
-Info (12128): Elaborating entity "sete_segmentos" for hierarchy "sete_segmentos:HEXS" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 127
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(22): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(46): object "LED1_endereco" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 46
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(47): object "LED2_endereco" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 47
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(48): object "LEDR_endereco" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 48
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(53): object "HEX0" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 53
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(54): object "HEX1" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 54
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(55): object "HEX2" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 55
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(56): object "HEX3" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(57): object "HEX4" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(58): object "HEX5" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 58
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(64): object "FF_RESET" assigned a value but never read File: C:/DesComp/AULA_8/TopLevel.vhd Line: 64
+Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "buffer_3_state_8portas:KEY1" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 110
+Info (12128): Elaborating entity "sete_segmentos" for hierarchy "sete_segmentos:HEXS" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 159
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "sete_segmentos:HEXS|registradorGenerico:REGISTRADOR_0" File: C:/DesComp/AULA_8/seteSegmentos.vhd Line: 38
 Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "sete_segmentos:HEXS|conversorHex7Seg:HEXADECIMAL_0" File: C:/DesComp/AULA_8/seteSegmentos.vhd Line: 46
-Info (12128): Elaborating entity "LED" for hierarchy "LED:LEDS" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 144
+Info (12128): Elaborating entity "LED" for hierarchy "LED:LEDS" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 176
 Info (12128): Elaborating entity "FlipFlopUnitario" for hierarchy "LED:LEDS|FlipFlopUnitario:LED1" File: C:/DesComp/AULA_8/LED.vhd Line: 37
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "LED:LEDS|registradorGenerico:LEDR" File: C:/DesComp/AULA_8/LED.vhd Line: 46
-Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DEC1" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 159
-Info (12128): Elaborating entity "Processador" for hierarchy "Processador:MP" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 178
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DEC1" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 191
+Info (12128): Elaborating entity "Processador" for hierarchy "Processador:MP" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 210
 Warning (10541): VHDL Signal Declaration warning at Processador.vhd(27): used implicit default value for signal "Sinais_Controle" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/DesComp/AULA_8/Processador.vhd Line: 27
 Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "Processador:MP|muxGenerico4x1:MUX2" File: C:/DesComp/AULA_8/Processador.vhd Line: 47
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:MP|muxGenerico2x1:MUX1" File: C:/DesComp/AULA_8/Processador.vhd Line: 56
@@ -864,22 +875,22 @@ Info (12128): Elaborating entity "LogicaDeDesvio" for hierarchy "Processador:MP|
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:MP|registradorGenerico:END_RETORNO" File: C:/DesComp/AULA_8/Processador.vhd Line: 80
 Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:MP|somaConstante:incrementaPC" File: C:/DesComp/AULA_8/Processador.vhd Line: 92
 Info (12128): Elaborating entity "ULASomaSub" for hierarchy "Processador:MP|ULASomaSub:ULA1" File: C:/DesComp/AULA_8/Processador.vhd Line: 97
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 190
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 200
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 222
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 232
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 21
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/DesComp/AULA_8/TopLevel.vhd Line: 22
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 16
     Warning (15610): No output dependent on input pin "KEY[0]" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 17
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 17
@@ -895,13 +906,14 @@ Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 18
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 18
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 18
-Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+    Warning (15610): No output dependent on input pin "RESET_FPGA" File: C:/DesComp/AULA_8/TopLevel.vhd Line: 19
+Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
     Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Sat Oct 08 14:51:43 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Sun Oct 09 16:22:15 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:31
 
 
