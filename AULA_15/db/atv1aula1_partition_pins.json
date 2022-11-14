@@ -1,0 +1,681 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "instrucao[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[5]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "conteudo_ULA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[11]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[13]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[15]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[16]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[17]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[18]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[19]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[20]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[21]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[22]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[23]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[24]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[25]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[26]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[27]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[28]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[29]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[30]",
+					"strict" : false
+				},
+				{
+					"name" : "end_PC[31]",
+					"strict" : false
+				},
+				{
+					"name" : "end_pontos_controle[0]",
+					"strict" : false
+				},
+				{
+					"name" : "end_pontos_controle[1]",
+					"strict" : false
+				},
+				{
+					"name" : "end_pontos_controle[4]",
+					"strict" : false
+				},
+				{
+					"name" : "end_pontos_controle[5]",
+					"strict" : false
+				},
+				{
+					"name" : "end_pontos_controle[6]",
+					"strict" : false
+				},
+				{
+					"name" : "end_pontos_controle[7]",
+					"strict" : false
+				},
+				{
+					"name" : "end_pontos_controle[8]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[7]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[8]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[9]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[10]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[11]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[12]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[13]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[14]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[15]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[16]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[17]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[18]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[19]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[20]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[21]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[22]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[23]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[24]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[25]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[26]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[27]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[28]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[29]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[30]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_b[31]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[5]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[7]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[9]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[11]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[13]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[15]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[17]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[19]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[21]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[23]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[25]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[27]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[29]",
+					"strict" : false
+				},
+				{
+					"name" : "end_saida_reg_a[31]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_REGD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[7]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[8]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[9]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[10]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[11]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[12]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[13]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[14]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[15]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[16]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[17]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[18]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[19]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[20]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[21]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[22]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[23]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[24]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[25]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[26]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[27]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[28]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[29]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[30]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ram_simu[31]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_mux",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
